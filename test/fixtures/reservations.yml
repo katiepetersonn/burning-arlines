@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  row: MyString
+  column: MyString
+  flight_id: 1
+  user_id: 1
+
+two:
+  row: MyString
+  column: MyString
+  flight_id: 1
+  user_id: 1

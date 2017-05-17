@@ -1,9 +1,17 @@
 var app = app || {};
 
 app.AppRouter = Backbone.Router.extend({
-    routers: {
+    routers: 
+        "/flights": "initializeFlights",
+    },
+
+    initalizeFlights: function() {
+        var appView = new app.AppView();
+        appView.render();
+    }
+
+});
         '': "initalizeFlights"
-        // "/flights": "initalizeFlights"
     },
 
     initalizeFlights: function() {
@@ -13,5 +21,3 @@ app.AppRouter = Backbone.Router.extend({
     appView.render();
 }
 });
-
-//on search run SearchInputView

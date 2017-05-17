@@ -1,6 +1,5 @@
 var app = app || {};
 
-
 app.SearchInputView = Backbone.View.extend({
     el: "#app",
 
@@ -11,6 +10,7 @@ app.SearchInputView = Backbone.View.extend({
     searchFlights: function() {
         var from = $("#from").val();
         var to = $("#to").val();
+        
         // TODO: Add search flights functionality
     },
 

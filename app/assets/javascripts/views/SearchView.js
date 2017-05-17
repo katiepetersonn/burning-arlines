@@ -1,5 +1,9 @@
 var app = app || {};
 
 app.SearchView = Backbone.View.extend({
-    tagName: "li"
+    tagName: "li",
+
+    render: function() {
+        
+    }
 });

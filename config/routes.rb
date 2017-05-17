@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'pages/search'
+  get "search" => "pages#search"
 
   root "airplanes#index"
 

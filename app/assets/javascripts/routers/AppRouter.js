@@ -6,7 +6,7 @@ app.AppRouter = Backbone.Router.extend({
     },
 
     initalizeFlights: function() {
-        var flightView = new app.FlightView();
-        flightView.render();
+        var appView = new app.AppView();
+        appView.render();
     }
 });

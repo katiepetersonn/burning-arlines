@@ -1,7 +1,7 @@
 var app = app || {};
 
 app.AppRouter = Backbone.Router.extend({
-    routers: {
+    routers: 
         "/flights": "initializeFlights",
     },
 
@@ -10,4 +10,14 @@ app.AppRouter = Backbone.Router.extend({
         appView.render();
     }
 
+});
+        '': "initalizeFlights"
+    },
+
+    initalizeFlights: function() {
+        var appView = new app.AppView( {
+        collection: App.Flights
+        });
+    appView.render();
+}
 });

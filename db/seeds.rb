@@ -2,20 +2,20 @@ Airplane.destroy_all
 
 a1 = Airplane.create({
     name: 'PKC4211',
-    row: '100',
-    column: '26'  # THIS IS FOREIGN KEY
+    row: 100,
+    column: 26
 })
 
 a2 = Airplane.create({
     name: 'PLF622',
-    row: '95',
-    column: '21'
+    row: 95,
+    column: 21
 })
 
 a3 = Airplane.create({
     name: 'KLH936',
-    row: '80',
-    column: '16'
+    row: 80,
+    column: 16
 })
 
 puts "Airplane is ready to launch #{a1.name}"
@@ -30,7 +30,7 @@ Flight.destroy_all
         origin: "origin #{i}",
         destination: "destination #{i}",
         flight_date: Date.today,
-        airplane_id: "airplane_id #{a1.id}"
+        airplane_id: a1.id
     })
 
 puts "The airplane #{a1.name} will now be departing"
@@ -39,30 +39,27 @@ puts "The flight"
 end
 
 
-# User.destroy_all
-#
-# 5.times do |i|
-#     User.create({
-#         name: "name"
-#     })
-# end
+User.destroy_all
+
+5.times do |i|
+    User.create({
+        name: "Macho"
+    })
+
+puts "The Macho"
+
+end
 
 
-# ### ID ###
-# Reservation.create row: row, column: column, flight_id: flight_id, user_id: user_id
-# User.create name: name
-#
-# puts "Airplanes count: #{ Airplanes.count }"
+Reservation.destroy_all
 
-# Flight.destroy_all
-#     100.times do |index|
-#         row = ""
-#
-#         Flight.create origin: origin, destination: destination, date: date, airplane_id: airplane_id
-#     end
-#
-# Reservation.destroy_all
+5.times do |i|
+    Reservation.create({
+            row: 55,
+            column: 24,
+            flight_id: 736,
+            user_id: 333
+        })
 
-
-
-# User.destroy_all
+puts "The Reservation has been made"
+end 

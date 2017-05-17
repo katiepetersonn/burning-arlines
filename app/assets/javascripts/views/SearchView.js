@@ -1,12 +1,3 @@
-// var app = app || {};
-//
-// app.SearchView = Backbone.View.extend({
-//     tagName: "li",
-//
-//     render: function() {
-//     }
-// });
-
 var app = app ||{};
 
 app.SearchView = Backbone.View.extend({
@@ -20,6 +11,6 @@ app.SearchView = Backbone.View.extend({
   },
   render: function () {
     this.$el.text( this.model.get('date'));
-    this.$el.appendTo('#flightLists');
+    this.$el.appendTo('#search-results');
   }
 });

@@ -4,21 +4,15 @@ app.SearchInputView = Backbone.View.extend({
     el: "#app",
 
     events: {
-        "click button": "searchFlights"
+        "click #search-flights": "searchFlights",
+        "click #search-button": "render"
     },
 
     searchFlights: function() {
-
-        var from = $("#from").val();
-        var to = $("#to").val();
-
-        // var from = $("#from").val();
-        // var to = $("#to").val();
         var sv = new app.SearchView({
-            model: app.Flight
+            collection: app.Flights
         });
         sv.render();
-        // TODO: Add search flights functionality
     },
 
     render: function() {
@@ -26,3 +20,4 @@ app.SearchInputView = Backbone.View.extend({
         this.$el.html(templatemarkup);
     }
 });
+// add collection

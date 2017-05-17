@@ -2,11 +2,16 @@ var app = app || {};
 
 app.AppRouter = Backbone.Router.extend({
     routers: {
-        "/flights": "initalizeFlights"
+        '': "initalizeFlights"
+        // "/flights": "initalizeFlights"
     },
 
     initalizeFlights: function() {
-        var appView = new app.AppView();
-        appView.render();
-    }
+        var appView = new app.AppView( {
+        collection: App.Flights
+        });
+    appView.render();
+}
 });
+
+//on search run SearchInputView

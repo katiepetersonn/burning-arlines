@@ -60,6 +60,4 @@ Reservation.destroy_all
             flight_id: 736,
             user_id: 333
         })
-
-puts "The Reservation has been made"
 end 

@@ -14,4 +14,3 @@ app.Flights = Backbone.Collection.extend({
         });
     }
 });
-

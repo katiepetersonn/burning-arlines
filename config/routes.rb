@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/search'
+
   root "airplanes#index"
 
   resources :airplanes

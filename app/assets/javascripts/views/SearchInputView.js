@@ -8,9 +8,12 @@ app.SearchInputView = Backbone.View.extend({
     },
 
     searchFlights: function() {
-        var from = $("#from").val();
-        var to = $("#to").val();
-        
+        // var from = $("#from").val();
+        // var to = $("#to").val();
+        var sv = new app.SearchView({
+            model: app.Flight
+        });
+        sv.render();
         // TODO: Add search flights functionality
     },
 

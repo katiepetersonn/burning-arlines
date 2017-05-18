@@ -38,6 +38,30 @@ puts "The flight"
 # puts "The #{airplane_id} #{flight_number} will fly from #{origin} to #{destination} at " + Date.today
 end
 
+Flight.create({
+    flight_number: "flight_no0",
+    origin: "origin 0",
+    destination: "destination 1",
+    flight_date: Date.today,
+    airplane_id: a1.id
+})
+
+Flight.create({
+    flight_number: "flight_no0",
+    origin: "origin 0",
+    destination: "destination 2",
+    flight_date: Date.today,
+    airplane_id: a1.id
+})
+
+Flight.create({
+    flight_number: "flight_no0",
+    origin: "origin 0",
+    destination: "destination 3",
+    flight_date: Date.today,
+    airplane_id: a1.id
+})
+
 
 User.destroy_all
 

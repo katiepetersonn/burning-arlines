@@ -8,7 +8,8 @@ app.SearchView = Backbone.View.extend({
   },
 
   showFlight: function() {
-    var id = this.model.get("id");
+    console.log('nav to flight', this.model.get('id'));
+    var id = this.model.get('id');
     app.router.navigate("/flights/" + id, true);
   },
 

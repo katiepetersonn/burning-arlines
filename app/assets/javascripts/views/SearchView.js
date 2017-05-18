@@ -13,6 +13,7 @@ app.SearchView = Backbone.View.extend({
     app.router.navigate("/flights/" + id, true);
   },
 
+
   render: function () {
     var flight = this.model;
     var templateMarkup = $("#flightListView").html();

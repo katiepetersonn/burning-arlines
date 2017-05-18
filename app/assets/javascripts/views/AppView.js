@@ -4,8 +4,7 @@ app.AppView = Backbone.View.extend({
   el: "#app",
 
   events: {
-    "click #search-flights": "filterFlights",
-    "click .flight-num": "showFlight"
+    "click #search-flights": "filterFlights"
   },
 
   filterFlights: function() {

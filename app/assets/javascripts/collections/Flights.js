@@ -6,12 +6,12 @@ app.Flights = Backbone.Collection.extend({
     model: app.Flight,
 
     initialize: function() {
-        this.on("add", function(flight) {
-            var fv = new app.FlightView({
-                model: flight
-            });
-            fv.render();
-        });
+        // this.on("add", function(flight) {
+        //     var fv = new app.FlightView({
+        //         model: flight
+        //     });
+        //     fv.render();
+        // });
     }
 });
 

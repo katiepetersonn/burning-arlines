@@ -1,8 +1,12 @@
 var app = app || {};
 
 app.FlightView = Backbone.View.extend({
+  el: "#app",
+
   render: function() {
-    var templateMarkup = $("#FlightsViewTemplate").html();
-    this.$el.html(templateMarkup);
+    var flight = this.model;
+    var templateMarkup = $("#flightView").html();
+    var actualTemplate = _.template(templateMarkup)(flight.toJSON());
+    this.$el.html(actualTemplate);
   }
 });

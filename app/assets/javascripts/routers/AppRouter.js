@@ -5,8 +5,10 @@ app.AppRouter = Backbone.Router.extend({
         "": "initializeFlights"
     },
 
-    initalizeFlights: function() {
-        var av = new app.AppView();
+    initializeFlights: function() {
+        var av = new app.AppView({
+            collection: app.flights
+        });
         av.render();
     }
 });

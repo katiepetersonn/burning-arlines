@@ -5,12 +5,10 @@
   <input type="text" id="from" placeholder="from">
   <input type="text" id="to" placeholder="to">
   <button class="btn btn-default" id="search-flights">Search</button>
-
   <h2>Flight search results</h2>
   <ul id="search-results">
-    
-  </ul>
 
+  </ul>
 </script>
 
 <script type="text/template" id="flightListView" >
@@ -23,7 +21,6 @@
   <p>Date: <%%= flight_date %></p>
   <p>Origin: <%%= origin %></p>
   <p>Destination: <%%= destination %></p>
-
   <table id="planeSeatsTable"></table>
   <a href="#" id="submit">Submit</a>
   <a href="#" id="clear">Clear</a>

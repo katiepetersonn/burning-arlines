@@ -10,13 +10,12 @@ app.AppView = Backbone.View.extend({
   filterFlights: function() {
     var from = $("#from").val();
     var to = $("#to").val();
-    var filterOne = this.collection.where({origin: "origin 0"});
-    var filterTwo = _.each(filterOne, function(i) {
-      debugger;
-       return _.where(i, {destination: "destination 1"});
-    });
 
-    console.log(filterTwo);
+    var matchedFlights = this.collection.filter(function (flight) {
+      return flight.get("origin") === from && flight.get("destination") === to;
+    });
+    this.collection = new app.Flights( matchedFlights );
+    this.render();
   },
 
   render: function () {

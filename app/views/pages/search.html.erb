@@ -14,15 +14,16 @@
 </script>
 
 <script type="text/template" id="flightListView" >
-  <%%= flight_date %>, <a href="#" class="flight-num"> <%%= flight_number %></a>, <%%= origin %> > <%%= destination %>, <%%= airplane_id %>
+  <%%= flight_date %>, <a class="flight-num"> <%%= flight_number %></a>, <%%= origin %> > <%%= destination %>, <%%= airplane_id %>
 </script>
 
 <script type="text/template" id="flightView">
   <h3>Flight Info</h3>
-  <p>Flight Number: {{ flight_num }}</p>
-  <p>Date: {{ date }}</p>
-  <p>Origin: {{ origin }}</p>
-  <p>Destination: {{ destination }}</p>
+  <p>Flight Number: <%%= flight_number %></p>
+  <p>Date: <%%= flight_date %></p>
+  <p>Origin: <%%= origin %></p>
+  <p>Destination: <%%= destination %></p>
+
   <table id="planeSeatsTable"></table>
   <a href="#" id="submit">Submit</a>
   <a href="#" id="clear">Clear</a>

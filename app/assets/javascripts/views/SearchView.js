@@ -3,6 +3,15 @@ var app = app ||{};
 app.SearchView = Backbone.View.extend({
   tagName: 'li',
 
+    events: {
+    "click .flight-num": "showFlight"
+  },
+
+  showFlight: function() {
+    var id = this.model.get("id");
+    app.router.navigate("/flights/" + id, true);
+  },
+
   render: function () {
     var flight = this.model;
     var templateMarkup = $("#flightListView").html();

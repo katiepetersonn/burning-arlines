@@ -3,19 +3,23 @@ var app = app || {};
 app.AppView = Backbone.View.extend({
   el: "#app",
 
-    events: {
-    "click #search-flights": "filterFlights"
+  events: {
+    "click #search-flights": "filterFlights",
+    "click .flight-num": "showFlight"
   },
 
   filterFlights: function() {
     var from = $("#from").val();
     var to = $("#to").val();
-
-    var matchedFlights = this.collection.filter(function (flight) {
-      return flight.get("origin") === from && flight.get("destination") === to;
-    });
-    this.collection = new app.Flights( matchedFlights );
-    this.render();
+    if( from === "" || to === "") {
+      return;
+    } else {
+      var matchedFlights = this.collection.filter(function (flight) {
+        return flight.get("origin") === from && flight.get("destination") === to;
+      });
+      this.collection = new app.Flights( matchedFlights );
+      this.render();
+    }
   },
 
   render: function () {

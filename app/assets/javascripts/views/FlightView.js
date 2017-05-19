@@ -8,11 +8,5 @@ app.FlightView = Backbone.View.extend({
     var templateMarkup = $("#flightView").html();
     var actualTemplate = _.template(templateMarkup)(flight.toJSON());
     this.$el.html(actualTemplate);
-
-    // var seatMap = document.getElementByID('');
-    debugger;
-  },
-
-
-
+  }
 });

@@ -7,5 +7,9 @@ $(function() {
     app.flights.fetch().done(function(data) {
         Backbone.history.start();
     });
-    
+
+    app.reservations = new app.Reservations();
+    app.reservations.fetch().done(function(data){
+    });
+
 });

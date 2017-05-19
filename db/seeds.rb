@@ -84,4 +84,4 @@ Reservation.destroy_all
             flight_id: 736,
             user_id: 333
         })
-end 
+end
